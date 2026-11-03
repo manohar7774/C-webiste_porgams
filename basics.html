@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Add Two Numbers ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    sum = a + b;
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter two numbers: 5 3</pre>
+      <p><b>Output:</b></p>
+      <pre>Sum = 8</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2: Check Even or Odd ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &amp;number);
+
+    if (number % 2 == 0) {
+        printf("Even number");
+    } else {
+        printf("Odd number");
+    }
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a number: 7</pre>
+      <p><b>Output:</b></p>
+      <pre>Odd number</pre>
+    </section>
+    <section class="question">
+      <h2>Question 3: Write a program to print the message:
+Today I made my first C Program ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+  printf("Today I made my first C Program.");
+  <p><b>Output:</b></p>
+  <pre>Today I made my first C Program.</pre>
+</section>
+<section class="question">
+      <h2>Question 4: Write a program to print your name at center of the first line?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+      void main()
+{
+    printf("Enter Your Name");
+    return 0;
+}
+        </code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a name : Manohar</pre>
+      <p><b>Output:</b></p>
+      <pre>Manohar</pre>
+    </section>
+<section class="question">
+      <h2>Question 5: Enter password display like ****** ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+    int main()
+{
+    char password[20];
+
+    printf("Enter password: ");
+    scanf("%c", password);
+
+    printf("******");
+
+    
+        </code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a password : 123@7</pre>
+      <p><b>Output:</b></p>
+      <pre>*****</pre>
+    </section>
+    <section class="question">
+      <h2>Question 6: Enter two character from user and print ASCII value ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char a, b;
+
+    printf("Enter two characters: ");
+    scanf("%c %c", &a, &b);
+
+    printf("ASCII value of %c = %d\n", a, a);
+    printf("ASCII value of %c = %d\n", b, b);
+
+}
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter the Characters: A B </pre>
+      <p><b>Output:</b></p>
+      <pre>A=65 B=66</pre>
+    </section>
+     <section class="question">
+      <h2>Question 7:write the program and print hello world ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    printf("Hello World");
+    return 0;
+}
+
+}</code></pre>
+      <p><b>Output:</b></p>
+      <pre>HELLO WORLD</pre>
+    </section>
+    <section class="question">
+      <h2>Question 8: Write a program for printing your name on output screen but your name should blink 5 time ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int i;
+
+    for(i = 1; i <= 5; i++)
+    {
+        printf("enter name\n");
+        delay(500);
+        clrscr();
+        delay(500);
+    }
+</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

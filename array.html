@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Find the Sum of All Elements in a  Array? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+
+    int arr[5] = {10, 20, 30, 40, 50};
+    int sum = 0;
+
+    for (int i = 0; i < 5; i++) {
+        sum=sum+arr[i];
+    }
+
+    printf("The sum of all elements in the array is: %d\n", sum);
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter numbers: 10 20 30 40 50</pre>
+      <p><b>Output:</b></p>
+      <pre>The sum of all elements in the array is: 150</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2:Find the Sum of All Elements in a 2D Matrix </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    int sum = 0;
+
+    printf("Matrix grid:\n");
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+            sum += matrix[i][j];
+        }
+        printf("\n");
+    }
+    printf("%d\n\n", sum);
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a number:1 2 3 4 5 6 7 8 9 </pre>
+      <p><b>Output:</b></p>
+      <pre>45</pre>
+    </section>
+  
+ <section class="question">
+      <h2>Question 3:Enter an array from user and print the array in reverse order?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int arr[100], num, i;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &num);
+
+    for(i = 0; i < num; i++)
+    {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nArray in reverse order:\n");
+
+    for(i = num - 1; i >= 0; i--)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter the number of elements: 5
+Enter element 1: 10
+Enter element 2: 20
+Enter element 3: 30
+Enter element 4: 40
+Enter element 5: 50</pre>
+      <p><b>Output:</b></p>
+      <pre>Array in reverse: 50 40 30 20 10</pre>
+    </section>
+<section class="question">
+      <h2>Question 4:Enter 5 values of array from user and print odd numbers of array?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+ int arr[5], i;
+
+for(i = 0; i < 5; i++)
+ {
+ printf("Enter number %d: ", i + 1);
+ scanf("%d", &arr[i]);
+ }
+
+ printf("\nOdd numbers in the array are:\n");
+
+ for(i = 0; i < 5; i++)
+    {
+ if(arr[i] % 2 != 0)
+        {
+ printf("%d ", arr[i]);
+  }
+<p><b>Input:</b></p>
+<pre>Enter the number of elements: 5
+Enter element 1: 10
+Enter element 2: 15
+Enter element 3: 20
+Enter element 4: 25
+Enter element 5: 30</pre>
+<p><b>Output:</b></p>
+<pre>Odd numbers are: 15 25</pre>
+ </section>
+ <section class="question">
+      <h2>Question 5: Enter the four number from user and print it into matrix? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+ int a[2][2], i, j;
+
+printf("Enter four numbers:\n");
+
+ for(i = 0; i < 2; i++)
+ {
+ for(j = 0; j < 2; j++)
+ {
+ scanf("%d", &a[i][j]);
+ }
+  }
+
+ printf("Matrix:\n");
+
+ for(i = 0; i < 2; i++)
+ {
+ for(j = 0; j < 2; j++)
+ {
+ printf("%d ", a[i][j]);
+ }
+ printf("\n");
+}
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter four numbers: 1 2 3 4</pre>
+      <p><b>Output:</b></p>
+      <pre>1 2 </pre>
+    <pre>3 4</pre> 
+    </section>
+    <section class="question">
+      <h2>Question 6: Enter the matrix from and transpose them ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+ int a[2][2], i, j;
+
+printf("Enter 4 elements of matrix:\n");
+
+ for(i = 0; i < 2; i++)
+ {
+for(j = 0; j < 2; j++)
+ {
+ scanf("%d", &a[i][j]);
+ }
+ }
+
+ printf("Original Matrix:\n");
+
+ for(i = 0; i < 2; i++)
+ {
+for(j = 0; j < 2; j++)
+{
+printf("%d ", a[i][j]);
+ }
+ printf("\n");
+}
+
+ printf("Transpose Matrix:\n");
+
+ for(i = 0; i < 2; i++)
+ {
+ for(j = 0; j < 2; j++)
+  {
+printf("%d ", a[j][i]);
+}
+ printf("\n");
+ }
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter four elements: 1 2 3 4</pre>
+      <p><b>Output:</b></p>
+      <pre>Transpose matrix
+1 3
+2 4 </pre> 
+    </section>
+ </main>
+<footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Enter a number from the user and print the series from 1 to that number ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 9; i++) {
+        printf("%d ", i);
+    }
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter numbers: 9</pre>
+      <p><b>Output:</b></p>
+      <pre>1 2 3 4 5 6 7 8 9</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2: Enter a number from the user and print that number 10 time ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 10; i++) {
+        printf("%d\n", n);
+    }
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a number: 7</pre>
+      <p><b>Output:</b></p>
+      <pre>Enter a number: 7
+7
+7
+7
+7
+7
+7
+7
+7
+7
+7</pre>
+    </section>
+    <section class="question">
+      <h2>Question 3: Write a program print all the odd number between 1 to 100 ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int i;
+
+    for(i = 1; i <= 100; i++)
+    {
+        if(i % 2 != 0)
+        {
+            printf("%d ", i);
+        }
+    }
+
+
+</code></pre>
+      <p><b>Output:</b></p>
+      <pre>1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99
+
+</pre>
+    </section>
+     <section class="question">
+      <h2>Question 4: Write a program print the table of 4 in the format given as below (till 20)?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 9; i++) {
+        printf("%d ", i);
+    }
+}</code></pre>
+
+      <p><b>Output:</b></p>
+      <pre>4 x 1 = 4
+4 x 2 = 8
+4 x 3 = 12
+4 x 4 = 16
+4 x 5 = 20
+4 x 6 = 24
+4 x 7 = 28
+4 x 8 = 32
+4 x 9 = 36
+4 x 10 = 40
+4 x 11 = 44
+4 x 12 = 48
+4 x 13 = 52
+4 x 14 = 56
+4 x 15 = 60
+4 x 16 = 64
+4 x 17 = 68
+4 x 18 = 72
+4 x 19 = 76
+4 x 20 = 80</pre>
+    </section>
+<section class="question">
+      <h2>Question 5: Enter a number from the user and find out the binary of that number ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int n, rem, binary = 0, place = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while(n > 0)
+    {
+        rem = n % 2;
+        binary = binary + rem * place;
+        place = place * 10;
+        n = n / 2;
+    }
+
+    printf("Binary = %d", binary);
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter numbers: 10</pre>
+      <p><b>Output:</b></p>
+      <pre>Binary;1010</pre>
+    </section>
+    <section class="question">
+      <h2>Question 6:Write a program print the pattern on the screen i.e. ?
+11111
+11111
+11111 </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+ int i, j;
+
+ for(i = 1; i <= 3; i++)
+ {
+for(j = 1; j <= 5; j++)
+ {
+ printf("1");
+ }
+ printf("\n");
+ }
+
+}</code></pre>
+      <p><b>Output:</b></p>
+      <pre>11111
+11111
+11111</pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

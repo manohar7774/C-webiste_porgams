@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+struct employee
+{
+    int id;
+    char name[50];
+    char designation[50];
+};
+
+void main()
+{
+    struct employee e[50];
+    int i;
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter details of employee %d\n", i + 1);
+
+        printf("Enter Employee ID: ");
+        scanf("%d", &e[i].id);
+
+        printf("Enter Name: ");
+        scanf("%s", e[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%s", e[i].designation);
+    }
+
+    printf("\nEmployee Details\n");
+    printf("ID\tName\tDesignation\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("%d\t%s\t%s\n", e[i].id, e[i].name, e[i].designation);
+    }
+
+}</code></pre>
+      </section>
+
+    <section class="question">
+      <h2>Question 2: Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+struct student
+{
+    int roll;
+    char name[50];
+    float fee;
+    char dob[20];
+};
+
+VOID main()
+{
+    struct student s[50], temp;
+    int i, j, n;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++)
+    {
+        printf("\nEnter details of student %d\n", i + 1);
+
+        printf("Enter Roll Number: ");
+        scanf("%d", &s[i].roll);
+
+        printf("Enter Name: ");
+        scanf("%s", s[i].name);
+
+        printf("Enter Fee: ");
+        scanf("%f", &s[i].fee);
+
+        printf("Enter DOB (DD/MM/YYYY): ");
+        scanf("%s", s[i].dob);
+    }
+
+    for(i = 0; i < n - 1; i++)
+    {
+        for(j = 0; j < n - i - 1; j++)
+        {
+            if(s[j].roll > s[j + 1].roll)
+            {
+                temp = s[j];
+                s[j] = s[j + 1];
+                s[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("\nStudent Details in Ascending Order\n");
+    printf("Roll\tName\tFee\tDOB\n");
+
+   for(i = 0; i < n; i++)
+   {
+   printf("%d\t%s\t%.2f\t%s\n",
+   s[i].roll, s[i].name, s[i].fee, s[i].dob);
+    }
+
+}</code></pre>
+      
+    </section>
+    <section class="question">
+      <h2>Question 3: Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?
+</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    struct employee
+    {
+        int empid;
+        char name[30];
+        char designation[30];
+    };
+
+    struct employee e[50];
+    int i;
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter details of employee %d\n", i + 1);
+
+        printf("Enter Employee ID: ");
+        scanf("%d", &e[i].empid);
+
+        printf("Enter Name: ");
+        scanf("%s", e[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%s", e[i].designation);
+    }
+
+    printf("\nNames of All Employees:\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("%s\n", e[i].name);
+    }
+}
+
+}</code></pre>
+  </main>
+
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

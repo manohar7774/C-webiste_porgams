@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Write a C program to print numbers from 1 to 10 using recursion?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void print(int n)
+{
+    if(n <= 10)
+    {
+        printf("%d", n);
+        print(n + 1);
+    }
+}
+
+void main()
+{
+    print(1);
+}
+}</code></pre>
+       <p><b>Output:</b></p>
+      <pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2: Write a C program to find the sum of first N natural numbers using recursion. ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+int sum(int n)
+{
+    if(n == 0)
+
+    return n + sum(n - 1);
+}
+
+void main()
+{
+    int n = 10;
+
+    printf("Sum = %d", sum(n));
+}
+
+</code></pre>
+      <p><b>Output:</b></p>
+      <pre>55</pre>
+    </section>
+    <section class="question">
+      <h2>Question 3:  Write a C program to find the Fibonacci series using recursion ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+int fib(int n)
+{
+    if(n == 0)
+        return 0;
+
+    if(n == 1)
+}
+
+void main()
+{
+    int i;
+
+    for(i = 0; i < 7; i++)
+    {
+        printf("%d ", fib(i));
+    }
+  <p><b>Output:</b></p>
+  <pre>0 1 1 2 3 5 8</pre>
+</section>
+<section class="question">
+      <h2>Question 4: Write a C program to count the digits of a number using recursion?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+       int count(int n)
+{
+    if(n == 0)
+}
+void main()
+{
+    int n = 12345;
+    printf("Total digits = %d", count(n));
+}
+        </code></pre>
+
+      <p><b>Output:</b></p>
+      <pre>no of digits: 5</pre>
+    </section>
+<section class="question">
+      <h2>Question 5: Write a C program to reverse a number using recursion ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+    int reverse(int n, int rev)
+{
+    if(n == 0)
+
+    return reverse(n / 10, rev * 10 + n % 10);
+}
+
+void main()
+{
+    int n = 1234;
+
+    printf("%d", reverse(n, 0));
+}
+
+    
+        </code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a password : 12345</pre>
+      <p><b>Output:</b></p>
+      <pre>54321</pre>
+    </section>
+  </main>
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

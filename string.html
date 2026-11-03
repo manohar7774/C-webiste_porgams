@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Enter a string from user and convert in uppercase ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s",str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
+        }
+    }
+
+    printf("Uppercase string = %s", str);
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a string:good morning</pre>
+      <p><b>Output:</b></p>
+      <pre>GOOD MORNING</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2: Enter a string from user and convert into lowercase ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Lowercase string = %s", str);
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a string: GOOD BYE</pre>
+      <p><b>Output:</b></p>
+      <pre>good bye</pre>
+    </section>
+    <section class="question">
+      <h2>Question 3: Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int roll, i;
+    char name[50], class[20];
+    float marks[5];
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &roll);
+
+    printf("Enter Name: ");
+    scanf("%s", name);
+
+    printf("Enter Class: ");
+    scanf("%s", class);
+
+    printf("Enter marks of 5 subjects:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%f", &marks[i]);
+    }
+
+    printf("\nStudent Details\n");
+    printf("Roll Number: %d\n", roll);
+    printf("Name: %s\n", name);
+    printf("Class: %s\n", class);
+
+    printf("Marks:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("Subject %d: %.2f\n", i + 1, marks[i]);
+    }
+
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter Roll Number: 101
+Enter Name: Rahul
+Enter Class: BCA
+Enter marks of 5 subjects:
+80
+75
+90
+85
+88</pre>
+      <p><b>Output:</b></p>
+      <pre>Student Details
+Roll Number: 101
+Name: XYZ
+Class: BCA
+Marks:
+Subject 1: 80
+Subject 2: 75
+Subject 3: 90
+Subject 4: 85
+Subject 5: 88</pre>
+    </section>
+    <section class="question">
+      <h2>Question 4: Enter the string from user and count all vowels ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    char str[100];
+    int i, count = 0;
+
+ printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+ {
+if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' ||
+str[i] == 'o' || str[i] == 'u' || str[i] == 'A' ||
+str[i] == 'E' || str[i] == 'I' || str[i] == 'O' ||
+str[i] == 'U')
+{
+count++;
+}
+}
+
+printf("Total vowels = %d", count);
+
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a string:Education</pre>
+      <p><b>Output:</b></p>
+      <pre>vowels are:5 </pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

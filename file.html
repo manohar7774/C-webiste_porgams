@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Create a file and write a quote into it ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    FILE *fp;
+    fp = fopen("name.txt", "w");
+
+    fprintf(fp, "GOOD MORNING");
+
+    fclose(fp);
+}
+</code></pre>
+       </section>
+
+    <section class="question">
+      <h2>Question 2:Read and display the contents of a file?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    FILE *fp;
+    char ch;
+
+    fp = fopen("name.txt", "r");
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        printf("%c", ch);
+    }
+
+    fclose(fp);
+}
+
+</code></pre>
+    </section>
+    <section class="question">
+      <h2>Question 3: Write 10 numbers into a file and display them ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    FILE *fp;
+    int i, n;
+
+    fp = fopen("number.txt", "w");
+
+    for(i = 1; i <= 5; i++)
+    {
+        scanf("%d", &n);
+        fprintf(fp, "%d ", n);
+    }
+
+    fclose(fp);
+
+    fp = fopen("number.txt", "r");
+
+    while(fscanf(fp, "%d", &n) != EOF)
+    {
+        printf("%d\n", n);
+    }
+
+    fclose(fp);
+}
+  
+</section>
+<section class="question">
+      <h2>Question 4: Count the number of characters in a file</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+     void main()
+{
+    FILE *fp;
+    char ch;
+    int count = 0;
+
+    fp = fopen("name.txt", "r");
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        count++;
+    }
+
+    printf("no of characters = %d", count);
+
+    fclose(fp);
+}
+        </code></pre>
+    </section>
+<section class="question">
+      <h2>Question 5: Create a File and Count the Number of Words in It</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+   void main()
+{
+    FILE *fp;
+    char ch;
+    int count = 0, flag = 0;
+
+    fp = fopen("data.txt", "w");
+
+    fprintf(fp, "Welcome to C programming language");
+
+    fclose(fp);
+
+    fp = fopen("data.txt", "r");
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        if(ch == ' ' || ch == '\n' || ch == '\t')
+        {
+            flag = 0;
+        }
+        else if(flag == 0)
+        {
+            count++;
+            flag = 1;
+        }
+    }
+
+    fclose(fp);
+
+    printf("Total number of words = %d", count);
+}
+    
+        </code></pre>
+    </section>
+  </main>
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>

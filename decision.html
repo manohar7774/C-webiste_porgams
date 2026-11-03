@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num > 0)
+    {
+        printf("The number is positive.");
+    }
+    else if(num < 0)
+    {
+        printf("The number is negative.");
+    }
+    else
+    {
+        printf("The number is zero.");
+    }
+
+    return 0;
+}</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter the numbers: -7 </pre>
+      <p><b>Output:</b></p>
+      <pre>Number is negative</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2:Enter a character from the user and check that it is an alphabet ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    {
+        printf("The entered character is an alphabet.");
+    }
+    else
+    {
+        printf("The entered character is not an alphabet.");
+    }
+
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a Character: M </pre>
+      <p><b>Output:</b></p>
+      <pre>character is alphbet</pre>
+</section>
+ <section class="question">
+      <h2>Question 3:Enter a number from user and check it is divisible by 4 or not ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 4 == 0)
+    {
+        printf("The number is divisible by 4.");
+    }
+    else
+    {
+        printf("The number is not divisible by 4.");
+    }
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a number: 20  </pre>
+      <p><b>Output:</b></p>
+      <pre>number is divisible by 4</pre>
+    </section>
+    <section class="question">
+      <h2>Question 4:Enter a number from the user and check it is a decimal number or not ? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    float num;
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%f", &num);
+
+    n = num;
+
+    if (num == n)
+        printf("Not a decimal number");
+    else
+        printf("It is a decimal number");
+
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a number: 20.5  </pre>
+      <p><b>Output:</b></p>
+      <pre>it is decimal number</pre>
+    </section>
+    
+    <section class="question">
+      <h2>Question 5:Enter one digit number from user and print in words ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num;
+
+    printf("Enter a digit (0-9): ");
+    scanf("%d", &n);
+    {
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a digit: 7 </pre>
+      <p><b>Output:</b></p>
+      <pre>seven</pre>
+    </section>
+    <section class="question">
+      <h2>Question 6: Enter a four characters from users and check they are equal or not?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    char a, b, c, d;
+
+    printf("Enter four characters: ");
+    scanf(" %c %c %c %c", &a, &b, &c, &d);
+
+    if(a == b && b == c && c == d)
+    {
+        printf("All four characters are equal");
+    }
+    else
+    {
+        printf("All four characters are not equal");
+    }
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a characters: a a a a </pre>
+      <p><b>Output:</b></p>
+      <pre>All charcters are equal</pre>
+    </section>
+  </main>
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+
+</html>

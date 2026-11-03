@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>C Language Questions</h1>
+    <p>Questions, input and output</p>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <section class="question">
+      <h2>Question 1: Display the value of a variable using a pointer ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a = 10;
+    int *p;
+
+    p = &a;
+
+    printf("%d", *p);
+}
+
+</code></pre>
+      <p><b>Output:</b></p>
+      <pre>10</pre>
+    </section>
+
+    <section class="question">
+      <h2>Question 2: Add two numbers using pointers ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a, b, sum;
+    int *p, *q;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    p = &a;
+    q = &b;
+
+    sum = *p + *q;
+
+    printf("Sum = %d", sum);
+}
+</code></pre>
+    </section>
+    <section class="question">
+      <h2>Question 3:  Swap two numbers using pointers?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a, b, temp;
+    int *p, *q;
+
+    printf("Enter two numbers: ");
+    scanf("%d", &a, &b);
+
+    p = &a;
+    q = &b;
+
+    temp = *p;
+    *p = *q;
+    *q = temp;
+
+    printf("After swapping:\n");
+    printf("a = %d", a);
+    printf("b = %d", b);
+}
+
+</section>
+<section class="question">
+      <h2>Question 4: Find the square of a number using pointers?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+      void main()
+{
+    int a, square;
+    int *p;
+
+    printf("Enter a number: ");
+    scanf("%d", &a);
+
+    p = &a;
+
+    square = (*p) * (*p);
+
+    printf("Square = %d", square);
+}
+        </code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter a name : 7</pre>
+      <p><b>Output:</b></p>
+      <pre>square: 49</pre>
+    </section>
+<section class="question">
+      <h2>Question 5: Print the elements of an array using pointers ?</h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+   void main()
+{
+    int a[5], i;
+    int *p;
+
+    printf("Enter 5 elements: ");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    p = a;
+
+    printf("Array elements are:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("%d", *(p+i));
+    }
+    
+        </code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter an elements :22 33 44 55 66</pre>
+      <p><b>Output:</b></p>
+      <pre>Array elements are:
+22
+33
+44
+55
+66</pre>
+    </section>
+    <section class="question">
+      <h2>Question 6:  Find the sum of array elements using pointers? </h2>
+      <p><b>Program:</b></p>
+      <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a[5], i, sum = 0;
+    int *p;
+
+    printf("Enter 5 elements: ");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    p = a;
+
+    for(i = 0; i < 5; i++)
+    {
+        sum = sum + *(p+i);
+    }
+
+    printf("Sum = %d", sum);
+}
+        
+</code></pre>
+      <p><b>Input:</b></p>
+      <pre>Enter 5 elements: 44 55 66 77 88 </pre>
+      <p><b>Output:</b></p>
+      <pre>sum:330 </pre>
+    </section>
+  </main>
+  <footer>
+    <p>Simple C Language Learning Website</p>
+  </footer>
+</body>
+</html>
